@@ -1,0 +1,7 @@
+@use '../base/_variables' as v;
+
+.page-container {
+  max-width: map-get(v.$breakpoints, 'wide-screen');
+  width: 100%;
+  margin: 0 auto;
+}

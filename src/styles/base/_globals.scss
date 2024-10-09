@@ -1,0 +1,66 @@
+@use 'variables' as v;
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: v.$font-family;
+  font-size: 1.6rem;
+}
+
+p {
+  color: v.$black;
+  font-size: v.$base-font-size;
+  line-height: 2;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1 {
+  font-size: v.$h1-font-size;
+}
+
+h2 {
+  font-size: v.$h2-font-size;
+}
+
+h3 {
+  font-size: v.$h3-font-size;
+}
+
+h5 {
+  font-size: v.$h5-font-size;
+}
+
+h6 {
+  font-size: v.$h6-font-size;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}

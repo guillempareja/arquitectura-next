@@ -1,0 +1,57 @@
+@use '../base/_variables' as v;
+@use '../base/_mixins' as m;
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &-primary {
+    background-color: v.$primary-color;
+    color: white;
+
+    &:hover {
+      background-color: darken(v.$primary-color, 10%);
+    }
+  }
+
+  &-secondary {
+    background-color: v.$secondary-color;
+    color: white;
+
+    &:hover {
+      background-color: darken(v.$secondary-color, 10%);
+    }
+  }
+
+  &-outline {
+    background-color: transparent;
+    color: v.$primary-color;
+    border: 2px solid v.$primary-color;
+
+    &:hover {
+      background-color: v.$primary-color;
+      color: white;
+    }
+  }
+
+  &-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  &-large {
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+  }
+
+  &-block {
+    display: block;
+    width: 100%;
+  }
+}

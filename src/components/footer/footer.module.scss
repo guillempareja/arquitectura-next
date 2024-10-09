@@ -1,0 +1,14 @@
+@use '../../styles/base/variables' as *;
+@use '../../styles/base/mixins' as *;
+
+.footer-container {
+  background-color: $black;
+}
+
+.footer {
+  @include page-container-padding;
+
+  p {
+    color: $white;
+  }
+}

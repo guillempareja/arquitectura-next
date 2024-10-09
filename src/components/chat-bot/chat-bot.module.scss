@@ -1,0 +1,9 @@
+@use '../../styles/base/variables' as *;
+@use '../../styles/base/mixins' as *;
+
+.chat-container {
+  @include flex-center;
+  width: 200px;
+  height: 100px;
+  background-color: $secondary-color;
+}

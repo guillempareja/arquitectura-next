@@ -1,0 +1,9 @@
+@use '../../styles/base/variables' as v;
+@use '../../styles/base/mixins' as m;
+
+.home-container {
+  @include m.page-container-padding;
+  @include m.flex-center;
+  background-color: v.$primary-color;
+  flex-grow: 1;
+}

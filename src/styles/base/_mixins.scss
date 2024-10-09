@@ -1,0 +1,42 @@
+@use './variables' as v;
+
+@mixin breakpoint($device) {
+  @if map-has-key(v.$breakpoints, $device) {
+    @media (max-width: map-get(v.$breakpoints, $device)) {
+      @content;
+    }
+  } @else {
+    @warn "The breakpoint `#{$device}` is not defined in the breakpoints map.";
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin page-container-padding($apply-padding-block: true) {
+  box-sizing: border-box;
+  padding-inline: 6.4rem;
+
+  @include breakpoint('tablet') {
+    padding-inline: 3.2rem;
+  }
+
+  @include breakpoint('phone') {
+    padding-inline: 1.6rem;
+  }
+
+  @if $apply-padding-block == true {
+    padding-block: 4.8rem;
+
+    @include breakpoint('tablet') {
+      padding-block: 2.4rem;
+    }
+
+    @include breakpoint('phone') {
+      padding-block: 1.6rem;
+    }
+  }
+}

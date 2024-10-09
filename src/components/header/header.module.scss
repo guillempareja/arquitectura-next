@@ -1,0 +1,15 @@
+@use '../../styles/base/variables' as *;
+@use '../../styles/base/mixins' as *;
+
+.header-container {
+  background-color: $black;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.header {
+  @include page-container-padding;
+  color: $white;
+}
